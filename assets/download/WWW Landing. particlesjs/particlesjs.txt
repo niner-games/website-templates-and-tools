@@ -1,4 +1,0 @@
-https://vincentgarreau.com/particles.js/#default
-https://vincentgarreau.com/particles.js/#snow
-https://vincentgarreau.com/particles.js/#nasa
-https://vincentgarreau.com/particles.js/#bubble
