@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>AH Survey DOC</title>
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="media/css/bootstrap.min.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="media/css/style.css" media="all"/>
+    <link href="media/css/shCore.css" rel="stylesheet" type="text/css"/>
+    <link href="media/css/shThemeDefault.css" rel="stylesheet" type="text/css"/>
+
+    <!-- JS -->
+    <script src="media/js/shCore.js"></script>
+    <script src="media/js/shBrushPhp.js"></script>
+    <script src="media/js/jquery.min.js"></script>
+    <style type="text/css">
+        td.code .container {
+            display: block !important;
+        }
+
+        td.code .container:after {
+            display: block !important;
+        }
+
+        td.code .container:before {
+            display: block !important;
+        }
+    </style>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 1)
+                    $('#top').fadeIn(600);
+                else
+                    $('#top').fadeOut(600);
+            });
+            $('#top').click(function () {
+                $('html, body').animate({scrollTop: '0px'}, 800);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <h2><span>AH Survey </span> Documentation</h2>
+        <ul>
+            <li>Tatwerat Team</li>
+            <li>http://www.www.tatwerat.com</li>
+            <li>Survey builder for create unlimited surveys with multi types of questions</li>
+            <li> Email me at <strong>info@tatwerat.com</strong></li>
+        </ul>
+    </div>
+    <br>
+    <div class="item">
+        <h3 id="setup">Tutorials And Build Survey</h3>
+        <div class="container">
+            <h4>
+                Compatible With
+                <a href="https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431" target="_blank">WPBakery</a>
+                And
+                <a href="https://wordpress.org/gutenberg/" target="_blank">Gutenberg</a>
+            </h4>
+            <p>Shortcode</p>
+            <pre class="brush: php;">
+
+                [ah-survey-widget id="{survey_id}"]
+
+             </pre>
+
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RFZQxdCp-TY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+</div>
+<p style="text-align:center;">Copyright 2020 <a href="https://themeforest.net/user/tatwerat-team">Tatwerat-Team</a></p>
+<div id="top">Top</div>
+<script>SyntaxHighlighter.all()</script>
+</body>
+</html>
