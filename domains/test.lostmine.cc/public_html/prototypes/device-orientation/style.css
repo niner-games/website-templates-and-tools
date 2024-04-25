@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Lost Pixelized Font';
+    src: url('lpf.woff2') format('woff2'), /* Modern Browsers */
+         url('lpf.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+        
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#back {
+  background-image: url("back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+#overlay {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.777);
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    color: #fff;
+    font-size: 6vw;
+    position: relative;
+    text-align: center;
+    font-family: 'Lost Pixelized Font', monospace;
+}
