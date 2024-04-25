@@ -1,0 +1,26 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    user-select: none; /* Standard syntax */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    background: radial-gradient(ellipse at center, #443501 0%, #000000 100%);
+}
+
+#main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
