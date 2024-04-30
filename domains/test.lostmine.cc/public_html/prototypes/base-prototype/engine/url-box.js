@@ -1,3 +1,7 @@
+window.addEventListener("load", function() {
+    UrlBox.setUrl('https://yqq.pl/proto/base');
+});
+
 const defaultUrlOverlayElementId = 'url-overlay';
 
 const UrlBox = {
