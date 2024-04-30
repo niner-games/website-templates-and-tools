@@ -25,9 +25,6 @@
     function handleResize() {
         var overlay = getOverlay();
         
-        // const windowWidth = window.innerWidth;
-        // const windowHeight = window.innerHeight;
-        
         overlay.innerHTML = `Page resolution: <b>${window.innerWidth}</b> x <b>${window.innerHeight}</b> px`;
     }
     
