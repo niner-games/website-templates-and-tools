@@ -1,6 +1,6 @@
 const defaultResulotionOverlayElementId = 'resolution-overlay';
 
-const ResBox = {
+const ResolutionBox = {
     id: defaultResulotionOverlayElementId,
     
     isSet: function (variable, def = false) {
@@ -17,8 +17,6 @@ const ResBox = {
 
     getOverlay: function() {
         let overlay = document.getElementById(this.getId());
-        
-        console.log(typeof overlay);
         
         return this.isSet(overlay) ? overlay : this.createOverlay();
     },
@@ -50,7 +48,7 @@ const ResBox = {
 };
 
 resizeFunc = function() {
-    ResBox.handleResize();
+    ResolutionBox.handleResize();
 };
 
 window.addEventListener("load", resizeFunc);
