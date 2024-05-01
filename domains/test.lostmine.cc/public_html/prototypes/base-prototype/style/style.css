@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'Lost Pixelized Font';
+    src: url('lpf.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 body, html {
   margin: 0;
   height: 100%;
-  font-family: Roboto, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+  font-family: 'Lost Pixelized Font', monospace;
 }
 
 #bg {
