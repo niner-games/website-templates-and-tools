@@ -27,8 +27,8 @@ const UrlBox = {
     },
     
     createOverlay: function() {
-        let url = this.isSet(this.url, window.location.href);
         let overlay = document.createElement("div");
+        let url = this.isSet(this.url, window.location.href);
         
         overlay.id = this.getId();
         
@@ -42,15 +42,22 @@ const UrlBox = {
         overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
         overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
         
-        overlay.innerHTML = `Page URL: <b>${url}</b>`;
-        
         return document.body.appendChild(overlay);
     },
     
     setUrl: function(href) {
         let overlay = this.getOverlay();
+        let anchor = document.createElement("a");
         let url = this.isSet(href, this.isSet(this.url, window.location.href));
         
-        overlay.innerHTML = `Page URL: <b>${url}</b>`;
+        overlay.innerHTML = "Page URL: ";
+        
+        anchor.href = url;
+        anchor.innerHTML = url;
+        anchor.style.color = "#aaa";
+        anchor.style.fontWeight = "bold";
+        anchor.style.textDecoration = "none";
+        
+        overlay.appendChild(anchor);
     }
 };
