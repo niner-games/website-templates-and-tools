@@ -7,12 +7,15 @@
     
     <title>Base Prototype</title>
     
-        <!-- TODO: Prototype's engine only! Remove before actual implementation !!! -->
-        
-        <script src="engine/resolution-box.js"></script>
-        <script src="engine/url-box.js"></script>
-        
-        <!-- TODO: Prototype's engine only! Remove before actual implementation !!! -->
+    <!-- TODO: Prototype's engine only! Remove before actual implementation !!! -->
+    
+    <script src="engine/translation-engine.js"></script>
+    <script src="engine/resolution-box.js"></script>
+    <script src="engine/url-box.js"></script>
+    
+    <!-- TODO: This is an actual translation table's pointer for current prototype -->
+    
+    <script src="translation.js"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,10 +23,15 @@
     <div id="bg">
     
         <div id="copyright-overlay" class="overlay">
-            Background image:
-            <a href="https://jooinn.com/beach-shore-during-sunset-6.html">Beach shore during sunset</a>
+        
+            <span text="setText('startup', 'Background image')">Background image</span>:
+            
+            <a href="https://jooinn.com/beach-shore-during-sunset-6.html"><span text="setText('startup', 'Beach shore during sunset')"></span></a>
+            
             @ <a href="https://jooinn.com/">Jooinn</a>
-            (<a href="https://jooinn.com/s/license.html">CC0 License</a>)
+            
+            (<a href="https://jooinn.com/s/license.html"><span text="setText('startup', 'CC0 License')"></span></a>)
+            
         </div>
     
     </div>
