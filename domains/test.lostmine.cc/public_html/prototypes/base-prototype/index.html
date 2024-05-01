@@ -7,11 +7,17 @@
     
     <title>Base Prototype</title>
     
-    <!-- TODO: Prototype's engine only! Remove before actual implementation !!! -->
+    <!-- TODO: This is prototype's engine only! Remove before actual implementation !!! -->
     
     <script src="engine/translation-engine.js"></script>
     <script src="engine/resolution-box.js"></script>
     <script src="engine/url-box.js"></script>
+    
+    <script defer="defer">
+        window.addEventListener("load", function() {
+            UrlBox.setUrl('https://yqq.pl/proto/base');
+        });
+    </script>
     
     <!-- TODO: This is an actual translation table's pointer for current prototype -->
     
