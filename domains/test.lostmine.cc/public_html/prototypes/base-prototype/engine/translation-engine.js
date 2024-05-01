@@ -1,10 +1,11 @@
+const defaultLanguageCode = 'en';
+const defaultLanguageOverlayFontSize = '14px';
+const defaultLanguageOverlayElementId = 'language-overlay';
+
 window.addEventListener("load", function() {
     LanguageBox.createOverlay();
     LanguageBox.translateDocument(LanguageBox.getLanguage());
 });
-
-const defaultLanguageCode = 'en';
-const defaultLanguageOverlayElementId = 'language-overlay';
 
 const LanguageBox = {
     id: defaultLanguageOverlayElementId,
@@ -54,9 +55,9 @@ const LanguageBox = {
         overlay.style.bottom = "0";
         overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
-        overlay.style.fontSize = "11px";
         overlay.style.position = "fixed";
         overlay.style.margin = "0 0 7px 7px";
+        overlay.style.fontSize = defaultLanguageOverlayFontSize;
         overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
         overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
         
@@ -76,6 +77,9 @@ const LanguageBox = {
         
         select.id = "the-select";
         select.value = this.getLanguage();
+        
+        select.style.fontSize = defaultLanguageOverlayFontSize;
+        
         select.addEventListener("change", this.handleChange);
         
         overlay.appendChild(select);

@@ -1,3 +1,4 @@
+const defaultUrlOverlayFontSize = '14px';
 const defaultUrlOverlayElementId = 'url-overlay';
 
 const UrlBox = {
@@ -32,9 +33,9 @@ const UrlBox = {
         overlay.style.right = "0";
         overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
-        overlay.style.fontSize = "11px";
         overlay.style.position = "fixed";
         overlay.style.margin = "7px 7px 0 0";
+        overlay.style.fontSize = defaultUrlOverlayFontSize;
         overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
         overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
         

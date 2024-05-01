@@ -1,3 +1,4 @@
+const defaultResulotionOverlayFontSize = '14px';
 const defaultResulotionOverlayElementId = 'resolution-overlay';
 
 const ResolutionBox = {
@@ -32,8 +33,8 @@ const ResolutionBox = {
         
         overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
-        overlay.style.fontSize = "11px";
         overlay.style.margin = "7px 0 0 7px";
+        overlay.style.fontSize = defaultResulotionOverlayFontSize;
         overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
         overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
         
