@@ -44,7 +44,7 @@ const ResolutionBox = {
     handleResize: function() {
         let overlay = this.getOverlay();
         
-        overlay.innerHTML = `Page resolution: <b>${window.innerWidth}</b> x <b>${window.innerHeight}</b> px`;
+        overlay.innerHTML = `<b>${window.innerWidth}</b> x <b>${window.innerHeight}</b> px`;
     }
 };
 

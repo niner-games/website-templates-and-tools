@@ -47,12 +47,9 @@ const UrlBox = {
         let anchor = document.createElement("a");
         let url = this.isSet(href, this.isSet(this.url, window.location.href));
         
-        overlay.innerHTML = "Page URL: ";
-        
         anchor.href = url;
         anchor.innerHTML = url;
         anchor.style.color = "#aaa";
-        anchor.style.fontWeight = "bold";
         anchor.style.textDecoration = "none";
         
         overlay.appendChild(anchor);
