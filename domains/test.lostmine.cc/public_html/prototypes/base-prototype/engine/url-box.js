@@ -31,13 +31,12 @@ const UrlBox = {
         
         overlay.style.top = "0";
         overlay.style.right = "0";
-        overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
         overlay.style.position = "fixed";
         overlay.style.margin = "7px 7px 0 0";
         overlay.style.fontSize = defaultUrlOverlayFontSize;
-        overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-        overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+        overlay.style.border = "solid 2px rgba(0, 0, 0, 0.3)";
         
         return document.body.appendChild(overlay);
     },
@@ -49,7 +48,8 @@ const UrlBox = {
         
         anchor.href = url;
         anchor.innerHTML = url;
-        anchor.style.color = "#aaa";
+        anchor.style.color = "#000";
+        anchor.style.fontWeight = "bold";
         anchor.style.textDecoration = "none";
         
         overlay.appendChild(anchor);

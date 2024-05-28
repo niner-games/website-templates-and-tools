@@ -31,12 +31,11 @@ const ResolutionBox = {
         overlay.style.left = "0";
         overlay.style.position = "fixed";
         
-        overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
         overlay.style.margin = "7px 0 0 7px";
         overlay.style.fontSize = defaultResulotionOverlayFontSize;
-        overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-        overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
+        overlay.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+        overlay.style.border = "solid 2px rgba(255, 255, 255, 0.5)";
         
         return document.body.appendChild(overlay);
     },

@@ -53,13 +53,12 @@ const LanguageBox = {
         
         overlay.style.left = "0";
         overlay.style.bottom = "0";
-        overlay.style.color = "#aaa";
         overlay.style.padding = "3px";
         overlay.style.position = "fixed";
         overlay.style.margin = "0 0 7px 7px";
         overlay.style.fontSize = defaultLanguageOverlayFontSize;
-        overlay.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-        overlay.style.border = "solid 2px rgba(255, 255, 255, 0.2)";
+        overlay.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+        overlay.style.border = "solid 2px rgba(0, 0, 0, 0.3)";
         
         for (var key in this.languages) {
             if (this.languages.hasOwnProperty(key)) {
