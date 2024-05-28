@@ -7,17 +7,22 @@
 }
 
 body, html {
-  margin: 0;
-  height: 100%;
-  font-family: 'Lost Pixelized Font', monospace;
+    margin: 0;
+    height: 100%;
+    font-family: 'Lost Pixelized Font', monospace;
 }
 
 #bg {
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("back.jpg");
-  background-position: center center;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("back.jpg");
+    background-position: center center;
 }
 
 .overlay {
@@ -26,6 +31,15 @@ body, html {
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.1);
     border: solid 2px rgba(0, 0, 0, 0.3);
+}
+
+#main-overlay {
+    color: #ddd;
+    margin: 11%;
+    padding: 42px;
+    font-size: 42px;
+    text-align: center;
+    text-shadow: 1px 1px #111;
 }
 
 #copyright-overlay {
@@ -39,4 +53,64 @@ body, html {
     color: #222;
     font-weight: bold;
     text-decoration: none;
+}
+
+/* Extra Large Devices, Ultra HD */
+
+@media only screen and (max-width: 2000px) {
+    #mq-2000 {display: block}
+    #mq-1200 {display: none}
+    #mq-992 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    #main-overlay {font-size: 42px}
+}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    #mq-2000 {display: none}
+    #mq-1200 {display: block}
+    #mq-992 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    #main-overlay {font-size: 42px}
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    #mq-2000 {display: none}
+    #mq-1200 {display: none}
+    #mq-992 {display: block}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    #main-overlay {font-size: 33px}
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    #mq-2000 {display: none}
+    #mq-1200 {display: none}
+    #mq-992 {display: none}
+    #mq-768 {display: block}
+    #mq-480 {display: none}
+    
+    #main-overlay {font-size: 21px}
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    #mq-2000 {display: none}
+    #mq-1200 {display: none}
+    #mq-992 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: block}
+    
+    #main-overlay {font-size: 14px}
 }

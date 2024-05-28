@@ -1,6 +1,10 @@
 let translation = {
     pl:
     {
+        "First code the default layout (992 px),": "",
+        "and then use CSS3 media queries": "",
+        "to code several child layouts,": "",
+        "i.e.: 768 px, 480 px, and 320 px.": "",
         "Creative Commons Attribution-Share Alike 2.0 Generic License": "licencja ogólna Creative Commons Uznanie autorstwa. Na tych samych warunkach 2.0",
         "Looking northeast across the San Juan River on Vancouver Island, British Columbia.": "Patrząc na północny wschód poprzez rzekę San Juan na wyspie Vancouver w Kolumbii Brytyjskiej."
     },

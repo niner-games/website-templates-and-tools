@@ -15,7 +15,7 @@
     
     <script defer="defer">
         window.addEventListener("load", function() {
-            UrlBox.setUrl('https://yqq.pl/proto/base');
+            UrlBox.setUrl('https://yqq.pl/rt');
         });
     </script>
     
@@ -28,6 +28,25 @@
 <body>
     <div id="bg">
     
+        <div id="main-overlay" class="overlay">
+        
+            <span text="setText('startup', 'First code the default layout (2000 px),')"></span><br />
+            <span text="setText('startup', 'and then use CSS3 media queries')"></span><br />
+            <span text="setText('startup', 'to code several child layouts,')"></span><br />
+            <span text="setText('startup', 'i.e.: 1200px, 992 px, 768 px, 480 px, and 320 px.')"></span><br /><br />
+            
+            <strong>
+            
+                <span id="mq-2000" style="display: none" text="setText('startup', 'Extra Large Devices, Ultra HD (2000 px width).')"></span>
+                <span id="mq-1200" style="display: none" text="setText('startup', 'Large Devices, Wide Screens (1200 px width).')"></span>
+                <span id="mq-992" style="display: none" text="setText('startup', 'Medium Devices, Desktops (992 px width).')"></span>
+                <span id="mq-768" style="display: none" text="setText('startup', 'Small Devices, Tablets (768 px width).')"></span>
+                <span id="mq-480" style="display: none" text="setText('startup', 'Extra Small Devices, Phones (480 px width).')"></span>
+                
+            </strong>
+        
+        </div>
+        
         <div id="copyright-overlay" class="overlay">
         
             <a href="https://en.wikipedia.org/wiki/File:Fog_on_the_San_Juan_River.jpg"><span text="setText('startup', 'Looking northeast across the San Juan River on Vancouver Island, British Columbia.')"></span></a>
