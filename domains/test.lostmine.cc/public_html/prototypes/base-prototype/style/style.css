@@ -64,7 +64,8 @@ body, html {
     #mq-768 {display: none}
     #mq-480 {display: none}
     
-    #main-overlay {font-size: 42px}
+    strong {font-size: 42px}
+    #main-overlay {font-size: 35px}
 }
 
 /* Large Devices, Wide Screens */
@@ -76,7 +77,8 @@ body, html {
     #mq-768 {display: none}
     #mq-480 {display: none}
     
-    #main-overlay {font-size: 42px}
+    strong {font-size: 42px}
+    #main-overlay {font-size: 35px}
 }
 
 /* Medium Devices, Desktops */
@@ -88,7 +90,8 @@ body, html {
     #mq-768 {display: none}
     #mq-480 {display: none}
     
-    #main-overlay {font-size: 33px}
+    strong {font-size: 33px}
+    #main-overlay {font-size: 25px}
 }
 
 /* Small Devices, Tablets */
@@ -100,7 +103,8 @@ body, html {
     #mq-768 {display: block}
     #mq-480 {display: none}
     
-    #main-overlay {font-size: 21px}
+    strong {font-size: 21px}
+    #main-overlay {font-size: 15px}
 }
 
 /* Extra Small Devices, Phones */
@@ -112,5 +116,6 @@ body, html {
     #mq-768 {display: none}
     #mq-480 {display: block}
     
-    #main-overlay {font-size: 14px}
+    strong {font-size: 14px}
+    #main-overlay {font-size: 10px}
 }
