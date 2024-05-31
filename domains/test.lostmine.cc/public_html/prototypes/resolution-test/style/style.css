@@ -55,12 +55,27 @@ body, html {
     text-decoration: none;
 }
 
-/* Extra Large Devices, Ultra HD */
+/* MQ5: 1201 px to 1800 px (Full HD screens, big displays) */
 
-@media only screen and (max-width: 2000px) {
-    #mq-2000 {display: block}
+@media only screen and (min-width: 1801px) {
+    #mq-more {display: block}
+    #mq-1800 {display: none}
     #mq-1200 {display: none}
-    #mq-992 {display: none}
+    #mq-1024 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    strong {font-size: 49px}
+    #main-overlay {font-size: 42px}
+}
+
+/* MQ5: 1201 px to 1800 px (Full HD screens, big displays) */
+
+@media only screen and (max-width: 1800px) {
+    #mq-more {display: none}
+    #mq-1800 {display: block}
+    #mq-1200 {display: none}
+    #mq-1024 {display: none}
     #mq-768 {display: none}
     #mq-480 {display: none}
     
@@ -68,12 +83,13 @@ body, html {
     #main-overlay {font-size: 35px}
 }
 
-/* Large Devices, Wide Screens */
+/* MQ4: 1025 px to 1200 px (HD screens, desktops) */
 
 @media only screen and (max-width: 1200px) {
-    #mq-2000 {display: none}
+    #mq-more {display: none}
+    #mq-1800 {display: none}
     #mq-1200 {display: block}
-    #mq-992 {display: none}
+    #mq-1024 {display: none}
     #mq-768 {display: none}
     #mq-480 {display: none}
     
@@ -81,12 +97,13 @@ body, html {
     #main-overlay {font-size: 35px}
 }
 
-/* Medium Devices, Desktops */
+/* MQ3: 769 px to 1024 px (small screens, laptops) */
 
-@media only screen and (max-width: 992px) {
-    #mq-2000 {display: none}
+@media only screen and (max-width: 1024px) {
+    #mq-more {display: none}
+    #mq-1800 {display: none}
     #mq-1200 {display: none}
-    #mq-992 {display: block}
+    #mq-1024 {display: block}
     #mq-768 {display: none}
     #mq-480 {display: none}
     
@@ -94,12 +111,13 @@ body, html {
     #main-overlay {font-size: 25px}
 }
 
-/* Small Devices, Tablets */
+/* MQ2: 481 px to 768 px (tablets) */
 
 @media only screen and (max-width: 768px) {
-    #mq-2000 {display: none}
+    #mq-more {display: none}
+    #mq-1800 {display: none}
     #mq-1200 {display: none}
-    #mq-992 {display: none}
+    #mq-1024 {display: none}
     #mq-768 {display: block}
     #mq-480 {display: none}
     
@@ -107,12 +125,13 @@ body, html {
     #main-overlay {font-size: 15px}
 }
 
-/* Extra Small Devices, Phones */
+/* MQ1: 320 px to 480 px (phones) */
 
 @media only screen and (max-width: 480px) {
-    #mq-2000 {display: none}
+    #mq-more {display: none}
+    #mq-1800 {display: none}
     #mq-1200 {display: none}
-    #mq-992 {display: none}
+    #mq-1024 {display: none}
     #mq-768 {display: none}
     #mq-480 {display: block}
     
