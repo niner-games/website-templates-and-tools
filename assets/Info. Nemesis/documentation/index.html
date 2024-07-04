@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Nemesis | Installation File</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+	  body {
+	    background: #f9f9f9;
+	  }
+      @media (max-width: 767.98px) {
+		.text-responsive {
+		  font-size: calc(150% + 1vw + 1vh);
+	    }
+	  }
+    </style>
+    
+  </head>
+  <body>
+		<main role="main" class="container pt-5">
+			<div class="row justify-content-center">
+				<div class="col-xl-12 text-center border-bottom pb-2">
+					<h1><span class="display-2 text-responsive">Nemesis</span> </h1> 
+					<h2 class="font-weight-light">Minimal Blog HTML Template</h2>
+				</div>
+			</div>
+			
+			<div class="mt-5"></div>
+			
+			<div class="row justify-content-center">
+				<div class="col-xl-12 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> Welcome</h3>
+					Created on February 2020<br/>
+					by <a href="https://themeforest.net/user/fbtemplates/portfolio" target="_blank">fbtemplates</a><br/>
+					Thank you for purchasing our theme Nemesis - Minimal Blog HTML Template. If you have any question, please feel free to contact us.
+				</div>
+				
+				<div class="col-xl-12 mt-5 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> Main File Structure</h3>
+					All the file are well organized, its so easy to work with the template.<br/>
+					1. Unzip the files.<br/>
+					2. Open "nemesis" folder.<br/><br/>
+					You will see 4 directories, css, fonts, images, js.<br/>
+					In the first folder Content you will find style.css and other styling files the all the other files expect the htmls.<br/>
+					Js folder contain only the jquery library. <br/>
+					Fonts folder contain essetial font files for fonts.<br/>
+				</div>
+				
+				<div class="col-xl-12 mt-5 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> HTML Structure</h3>
+					<p class="lead text-muted">The base structure was organized by container, row, col-** class</p>
+					<pre class="card px-4 pt-4 pb-2">
+&lt;div class="outer-wrapper clearfix" id="outer-wrapper"&gt;
+    &lt;div class="container fbt-elastic-container"&gt;
+        &lt;div class="row justify-content-center"&gt;
+
+            &lt;!-- Main Wrapper --&gt;
+            &lt;div class="fbt-main-wrapper col-xl-12"&gt;
+
+                &lt;div id="main-wrapper"&gt;
+                    &lt;div class="main-section" id="main_content"&gt;
+                        
+                        &lt;div class="blog-posts fbt-index-post-wrap card-columns"&gt;
+
+                            &lt;div class="blog-post fbt-index-post card radius-10"&gt;
+                                &lt;div class="fbt-post-thumbnail"&gt;
+                                    &lt;a href="./single.html"&gt;
+                                        &lt;img alt="" class="post-thumbnail lazyloaded" data-src="./images/img-2.jpg" 
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="fbt-post-caption card-body"&gt;
+                                    &lt;h3 class="post-title h4 card-title"&gt;
+                                        &lt;a href="./single.html"&gt;
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        &lt;/a&gt;
+                                    &lt;/h3&gt;
+                                    &lt;div class="post-meta"&gt;
+                                        &lt;span class="post-author"&gt;&lt;a href="#"&gt;fbtemplates&lt;/a&gt;&lt;/span&gt;
+                                        &lt;span class="post-date published"&gt;June 19, 2019&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;p class="post-excerpt card-text"&gt;
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit. Donec facilisis leo et bibendum
+                                        pretium. Suspendisse li…
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="blog-post hentry fbt-index-post card radius-10"&gt;
+                                &lt;div class="fbt-post-thumbnail"&gt;
+                                    &lt;a href="./single.html"&gt;
+                                        &lt;img alt="" class="post-thumbnail lazyloaded" data-src="./images/img-3.jpg" 
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="fbt-post-caption card-body"&gt;
+                                    &lt;h3 class="post-title h4 card-title"&gt;
+                                        &lt;a href="./single.html"&gt;
+                                            Nunc tellus libero, tempus id luctus eget, fermentum.
+                                        &lt;/a&gt;
+                                    &lt;/h3&gt;
+                                    &lt;div class="post-meta"&gt;
+                                        &lt;span class="post-author"&gt;&lt;a href="#"&gt;fbtemplates&lt;/a&gt;&lt;/span&gt;
+                                        &lt;span class="post-date published"&gt;June 05, 2019&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;p class="post-excerpt card-text"&gt;
+                                        Donec dolor elit, pellentesque a massa
+                                        pellentesque, euismod sagittis ipsum. Nullam a diam ac turpis
+                                        iaculis vu…
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="blog-post hentry fbt-index-post card radius-10"&gt;
+                                &lt;div class="fbt-post-thumbnail"&gt;
+                                    &lt;a href="./video_post.html"&gt;
+                                        &lt;img alt="" class="post-thumbnail lazyloaded"  data-src="./images/img-4.jpg" 
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="&gt;
+                                    &lt;/a&gt;
+                                    &lt;span class="video-icon"&gt;&lt;i class="fa fa-play"&gt;&lt;/i&gt;&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;div class="fbt-post-caption card-body"&gt;
+                                    &lt;h3 class="post-title h4 card-title"&gt;
+                                        &lt;a href="./video_post.html"&gt;
+                                            The
+                                            future of news blogger themes. Custom post carousel.
+                                        &lt;/a&gt;
+                                    &lt;/h3&gt;
+                                    &lt;div class="post-meta"&gt;
+                                        &lt;span class="post-author"&gt;&lt;a href="#"&gt;fbtemplates&lt;/a&gt;&lt;/span&gt;
+                                        &lt;span class="post-date published"&gt;September 13, 2018&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;p class="post-excerpt card-text"&gt;
+                                        Fames dictumst massa massa, qui sapien
+                                        per, mauris id sed cubilia suspendisse neque. Proin natoque
+                                        consectetuer…
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            ............................
+
+                        &lt;/div&gt;
+
+                        &lt;div class="blog-pager" id="blog-pager"&gt;
+                            &lt;div class="list-inline"&gt;
+                                &lt;a class="blog-pager-older-link list-inline-item" href="#" title="More posts"&gt;
+                                    &lt;div class="fbt-bp-message text-uppercase font-weight-bold"&gt;More posts&lt;/div&gt;
+                                    &lt;span aria-hidden="true" class="fa fa-angle-down"&gt;&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- #blog-pager --&gt;
+
+                    &lt;/div&gt;
+                &lt;/div&gt;&lt;!-- #main-wrapper --&gt;
+
+            &lt;/div&gt;&lt;!-- .fbt-main-wrapper --&gt;
+
+            ..............................
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+				</div>
+				
+				<div class="col-xl-12 mt-5 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> CSS Structure</h3>
+					<p class="lead text-muted">The base CSS structure</p>
+					<pre class="card px-4 pt-4 pb-2">
+/* Posts
+===================================== */
+.tooltip {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feed-view .card-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feed-view .blog-post {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-view .card-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.item-view .post-body {
+  font-family: "Nunito", sans-serif !important;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 34px !important;
+  letter-spacing: .3px !important;
+  color: #222222;
+}
+
+.item-view .fbt-post-thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.post-meta {
+  font-family: "Nunito", sans-serif;
+  font-size: calc(14px - 2px);
+  font-weight: 400;
+}
+
+.post-meta span:not(:last-child):after {
+  content: '/';
+  margin: 0 3px 0 7px;
+}
+
+.post-meta a {
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.post-meta a:hover {
+  color: #47c3fb;
+}
+
+.post-meta .post-author {
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.post-title {
+  margin-bottom: 12px;
+}
+
+.post-excerpt {
+  margin-top: 10px;
+}
+
+.fbt-post-thumbnail {
+  width: 100%;
+  height: 242px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-post:nth-child(2) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(4) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(6) .fbt-post-thumbnail {
+  height: 434px;
+}
+
+.blog-post:nth-child(8) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(10) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(12) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(14) .fbt-post-thumbnail {
+  height: 250px;
+}
+
+.blog-post:nth-child(2n+2) .video-icon {
+  display: none;
+}
+
+.blog-post:nth-child(2n+2) .card-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 110%);
+  pointer-events: none;
+}
+
+.blog-post:nth-child(2n+2):hover h3 {
+  text-decoration: underline;
+}
+
+.blog-post:nth-child(2n+2):hover h3 a {
+  text-decoration: underline;
+}
+
+.blog-post:nth-child(2n+2) h3 {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n+2) h3 a {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n+2) .post-meta {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n+2) .post-meta a {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n+2) .post-meta .post-author {
+  color: #fff !important;
+}
+
+.blog-post:nth-child(2n+2) .card-text {
+  color: #fff !important;
+}
+
+.fbt-item-post .post-body img {
+  max-width: 100%;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fbt-index-post.card {
+  background-color: #4a42ec;
+}
+
+.fbt-index-post.card:nth-child(3) {
+  background-color: #ff4274;
+}
+
+.fbt-index-post.card:nth-child(5) {
+  background-color: #0099cc;
+}
+
+.fbt-index-post.card:nth-child(7) {
+  background-color: #b5afeb;
+}
+
+.fbt-index-post.card:nth-child(11) {
+  background-color: #ff9900;
+}
+
+.fbt-index-post.card:nth-child(15) {
+  background-color: #939ead;
+}
+
+.fbt-index-post.card h3 {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card h3 a {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card h3 a:hover {
+  text-decoration: underline;
+}
+
+.fbt-index-post.card h3:hover {
+  text-decoration: underline;
+}
+
+.fbt-index-post.card .post-meta {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .post-meta a {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .post-meta .post-author {
+  color: #ffffff !important;
+}
+
+.fbt-index-post.card .card-text {
+  color: #ffffff !important;
+}
+
+.card-columns .fbt-index-post.card {
+  margin-bottom: calc(35px - 5px);
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 35px;
+    column-gap: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+.video-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  border-radius: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.video-icon i {
+  text-align: center;
+  margin-left: 3px;
+  line-height: 38px;
+}
+					</pre>
+				</div>
+				
+				<div class="col-xl-12 mt-5 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> SCSS Structure</h3>
+					<pre class="card px-4 pt-4 pb-2">
+/* Related Posts
+===================================== */
+.fbt-rel-post-wrapper {
+    .fbt-shape-title {
+        &amp;::before {
+            right: -30px;
+            top: -30px;
+            background-color: $rp_shape_background_color;
+        }
+    }
+}
+#related-posts {
+    .fbt-post-thumbnail {
+        height: $rp_thumbnail_height;
+    }
+    .card {
+        box-shadow: 0 8px 20px rgba(0,31,52,.15);
+    }
+    h5 {
+        a {
+            &amp;:hover {
+                color: $rp_hover_color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+					</pre>
+				</div>
+				
+				<div class="col-xl-12 mt-5 border-bottom pb-3">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> Source &amp; Credits</h3>
+					<ul>
+						<li>Fonts
+							<ul>
+								<li><a href="https://fonts.google.com/specimen/Nunito">Nunito</a></li>
+								<li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
+								<li><a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a></li>
+								<li><a href="https://fonts.google.com/specimen/Oswald">Oswald</a></li>
+							</ul>
+						</li>
+						<li>Icons
+							<ul>
+								<li><a href="https://fontawesome.com/v4.7.0/">FontAwesome</a></li>
+							</ul>
+						</li>
+						<li>Framework
+							<ul>
+								<li><a href="https://getbootstrap.com/">Bootstrap 4+</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="row justify-content-center">
+
+				<div class="col-xl-12 mt-5 border-bottom pb-5">
+					<h3 class="font-weight-light mb-3"><i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i> Support</h3>
+					<p class="lead">Thank you so much for purchasing this template. Glad to help you if you have any questions relating to this template.
+                    <a href="https://themeforest.net/user/fbtemplates#contact" target="_blank">fbtemplates</a></p>
+				</div>
+				
+			</div>
+		</main><!-- /.container -->
+	</body>
+</html>
