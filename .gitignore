@@ -31,3 +31,4 @@ phpunit.phar
 /phpunit.xml
 tests/_output/*
 tests/_support/_generated
+/.github/
