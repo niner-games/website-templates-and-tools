@@ -1,6 +1,6 @@
 <p style="text-align: center">
     <a href="https://www.ninergames.com/" target="_blank">
-        <img src="LOGO.png" alt="Logo of Niner Games" width="1088" height="1139">
+        <img src="LOGO.svg" alt="Logo of Niner Games" width="300" height="314">
     </a>
 </p>
 
