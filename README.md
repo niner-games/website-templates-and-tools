@@ -5,7 +5,7 @@
 </p>
 
 <div style="width: 100%;">
-  <img src="LOGO.svg" style="width: 100%;" alt="Logo of Niner Games">
+    <img src="LOGO.svg" width="300" height="314"> alt="Animated Title">
 </div>
 
 <h1 style="text-align: center">Website and Company Hosting Structure</h1><br />
