@@ -7,7 +7,9 @@
 </p>
 
 <p align="center">
-    <img src="TITLE.svg" width="600" height="63" alt="Animated Title">
+    <img src="TITLE.svg" width="600" height="63" alt="Animated Title: Website and Company Hosting Structure">
 </p>
+
+<hr>
 
 Hosting structure used for hosting all pages, SEO stubs etc. for our games.
