@@ -1,5 +1,5 @@
 <?php
-    $current_host = file_get_contents('http://ipecho.net/plain') ?? $_SERVER['REMOTE_ADDR'] ?? '';
+    $current_host = $_SERVER['REMOTE_ADDR'] ?? '';
     $config = file_exists('config.inc') ? include 'config.inc' : [];
 ?>
 
@@ -24,7 +24,7 @@
                 <div id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <?php
-                            if (!empty($config['host_url']) && $config['host_url'] === $current_host) {
+                            if (!empty($config['host_urls']) && in_array($current_host, $config['host_urls'])) {
                                 if (!empty($config['menu_items']) && is_array($config['menu_items'])) {
                                     foreach ($config['menu_items'] as $button) {
                                         $url = htmlspecialchars($button['url'] ?? '#');
