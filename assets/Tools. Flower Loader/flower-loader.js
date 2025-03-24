@@ -81,13 +81,21 @@ function initFlowerLoader(targetElement) {
     const ctx = canvas.getContext('2d');
 
     const numPetals = 12;
-    const petalRadius = Math.min(canvas.width, canvas.height) / 12;
+    const petalStartColor = "#000000";
+    const petalFinishColor = "#aaaaaa";
+    const petalRadius = Math.max(canvas.width, canvas.height) / 24;
     const petalLength = petalRadius * 0.2;
     const petalWidth = petalRadius * 0.2;
-    const centerRadius = petalRadius * 0.2;
-    const petalColor = "#222222";
-    const centerColor = "#222222";
     let angle = 0;
+
+    function interpolateColor(startColor, endColor, factor) {
+        const start = parseInt(startColor.slice(1), 16);
+        const end = parseInt(endColor.slice(1), 16);
+        const r = Math.round((start >> 16) * (1 - factor) + (end >> 16) * factor);
+        const g = Math.round(((start >> 8) & 0xff) * (1 - factor) + ((end >> 8) & 0xff) * factor);
+        const b = Math.round((start & 0xff) * (1 - factor) + (end & 0xff) * factor);
+        return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+    }
 
     function drawFlower() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -97,6 +105,8 @@ function initFlowerLoader(targetElement) {
         for (let i = 0; i < numPetals; i++) {
             ctx.save();
             const theta = angle + (i * 2 * Math.PI / numPetals);
+            const factor = i / (numPetals - 1);
+            const petalColor = interpolateColor(petalStartColor, petalFinishColor, factor);
             ctx.rotate(theta);
             ctx.beginPath();
             ctx.ellipse(0, petalRadius, petalWidth, petalLength, 0, 0, 2 * Math.PI);
@@ -105,17 +115,15 @@ function initFlowerLoader(targetElement) {
             ctx.restore();
         }
 
-        ctx.beginPath();
-        ctx.arc(0, 0, centerRadius, 0, 2 * Math.PI);
-        ctx.fillStyle = centerColor;
-        ctx.fill();
         ctx.restore();
 
-        angle += 0.02;
+        angle += 0.03;
+
         requestAnimationFrame(drawFlower);
     }
 
     drawFlower();
+
 
     return { canvas, dimmer };
 }
@@ -217,3 +225,7 @@ function fetchDataWithLoader(targetElement, url, responseType = 'json', onSucces
             stopFlowerLoader(loader);
         });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    bindPageUnloadLoader();
+});

@@ -5,21 +5,37 @@
     <title>AJAX Loader Example with Extended Functionality</title>
 </head>
 <body>
-    <div id="specificElement1" style="width: 700px; height: 280px; background-color: lightgray; margin: 20px auto;">
-        Element 1
-    </div>
-    <div id="specificElement2" style="width: 500px; height: 270px; background-color: lightblue; margin: 20px auto;">
-        Element 2
-    </div>
-    <div id="specificElement3" style="width: 700px; height: 250px; background-color: lightgreen; margin: 20px auto;">
-        Element 3
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px">
+        <div id="aPlaceholder1" style="width: 300px; height: 300px; background-color: lightgray;">
+            Text Placeholder
+        </div>
+        <div id="aPlaceholder2" style="width: 500px; height: 300px; background-color: lightblue;">
+            JSON Placeholder
+        </div>
+        <div id="aPlaceholder3" style="width: 300px; height: 300px; background-color: lightgreen;">
+            HTML Placeholder
+        </div>
+        <div id="aPlaceholder4" style="width: 500px; height: 300px; background-color: LightCyan;">
+            Error Placeholder
+        </div>
+        <div id="aPlaceholder5" style="width: 200px; height: 300px; border-color: LightCyan;">
+            Another Error Placeholder, but This Will Remain Empty...
+        </div>
     </div>
 
     <button id="startFullPageLoader">Start Full-Screen Loader</button>
-    <button id="startElementLoader1">Fetch Text for Element 1</button>
-    <button id="startElementLoader2">Fetch JSON for Element 2</button>
-    <button id="startElementLoader3">Fetch HTML for Element 3</button>
-    <button id="openExternalLink">Go to External Resource</button>
+    <button id="theButton1">Fetch Text</button>
+    <button id="theButton2">Fetch JSON</button>
+    <button id="theButton3">Fetch HTML</button>
+    <button id="theButton4">This Won't Work</button>
+        
+    <a href="http://10.0.2.34">
+        <button>Go to External Website to Test beforeUnload() event binding</button>
+    </a><br /><br />
+        
+    <button style="height: 100px;" id="theButton6"><strong>This Will Fail with a Timeout</strong><br /><br />(unless you are sitting in the Akademia Śląska building<br />and you are connected to its wired (not Wi-Fi!) network)</button>
+    
+    <button style="height: 100px;" id="theButton5"><strong>This Won't Work As Well, but with Callback</strong><br /><br />No more ding-dong with Akademia Śląska,<br />So you should see the results almost at once!</button>
 
     <script src="flower-loader.js"></script>
     <script>
@@ -27,13 +43,13 @@
             startFlowerLoader();
         });
 
-        document.getElementById('startElementLoader1').addEventListener('click', function () {
-            const target = document.getElementById('specificElement1');
-            fetchDataWithLoader(target, 'https://baconipsum.com/api/?type=meat-and-filler&sentences=21', 'text');
+        document.getElementById('theButton1').addEventListener('click', function () {
+            const target = document.getElementById('aPlaceholder1');
+            fetchDataWithLoader(target, 'https://baconipsum.com/api/?type=meat-and-filler&sentences=9', 'text');
         });
         
-        document.getElementById('startElementLoader2').addEventListener('click', function () {
-            const target = document.getElementById('specificElement2');
+        document.getElementById('theButton2').addEventListener('click', function () {
+            const target = document.getElementById('aPlaceholder2');
 
             fetchDataWithLoader(
                 target,
@@ -41,13 +57,13 @@
                 'json',
                 (data) => {
                     target.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-                    alert(`Content: ${data.content}`);
+                    alert(`${data.content}`);
                 }
             );
         });
 
-        document.getElementById('startElementLoader3').addEventListener('click', function () {
-            const target = document.getElementById('specificElement3');
+        document.getElementById('theButton3').addEventListener('click', function () {
+            const target = document.getElementById('aPlaceholder3');
 
             fetchDataWithLoader(
                 target,
@@ -69,13 +85,29 @@
                 }
             );
         });
-
-        document.getElementById('openExternalLink').addEventListener('click', function () {
-            const url = 'http://10.0.2.34';
-            window.location.href = url;
+        
+        document.getElementById('theButton4').addEventListener('click', function () {
+            const target = document.getElementById('aPlaceholder4');
+            fetchDataWithLoader(target, 'https://raw.githubusercontent.com/ng/lm/refs/heads/main/r.md', 'text');
         });
-
-        bindPageUnloadLoader();
+        
+        document.getElementById('theButton5').addEventListener('click', function () {
+            const target = document.getElementById('aPlaceholder5');
+            fetchDataWithLoader(
+                target,
+                'https://raw.githubusercontent.com/ng/lm/refs/heads/main/r.md',
+                'text',
+                null,
+                (error) => {
+                    alert(`Oh, no! :(`);
+                }
+            );
+        });
+        
+        document.getElementById('theButton6').addEventListener('click', function () {
+            const target = document.getElementById('theButton6');
+            fetchDataWithLoader(target, 'http://10.0.2.34', 'text');
+        });
     </script>
 </body>
 </html>
