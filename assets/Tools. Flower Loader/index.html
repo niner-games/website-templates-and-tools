@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Loader Example with Extended Functionality</title>
+</head>
+<body>
+    <div id="specificElement1" style="width: 700px; height: 280px; background-color: lightgray; margin: 20px auto;">
+        Element 1
+    </div>
+    <div id="specificElement2" style="width: 500px; height: 270px; background-color: lightblue; margin: 20px auto;">
+        Element 2
+    </div>
+    <div id="specificElement3" style="width: 700px; height: 250px; background-color: lightgreen; margin: 20px auto;">
+        Element 3
+    </div>
+
+    <button id="startFullPageLoader">Start Full-Screen Loader</button>
+    <button id="startElementLoader1">Fetch Text for Element 1</button>
+    <button id="startElementLoader2">Fetch JSON for Element 2</button>
+    <button id="startElementLoader3">Fetch HTML for Element 3</button>
+    <button id="openExternalLink">Go to External Resource</button>
+
+    <script src="flower-loader.js"></script>
+    <script>
+        document.getElementById('startFullPageLoader').addEventListener('click', function () {
+            startFlowerLoader();
+        });
+
+        document.getElementById('startElementLoader1').addEventListener('click', function () {
+            const target = document.getElementById('specificElement1');
+            fetchDataWithLoader(target, 'https://baconipsum.com/api/?type=meat-and-filler&sentences=21', 'text');
+        });
+        
+        document.getElementById('startElementLoader2').addEventListener('click', function () {
+            const target = document.getElementById('specificElement2');
+
+            fetchDataWithLoader(
+                target,
+                'https://freefakeapi.io/api/comments/3',
+                'json',
+                (data) => {
+                    target.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    alert(`Content: ${data.content}`);
+                }
+            );
+        });
+
+        document.getElementById('startElementLoader3').addEventListener('click', function () {
+            const target = document.getElementById('specificElement3');
+
+            fetchDataWithLoader(
+                target,
+                'https://raw.githubusercontent.com/niner-games/lost-mine/refs/heads/main/README.md',
+                'html',
+                (data) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+
+                    const firstParagraph = doc.querySelector('p');
+
+                    if (firstParagraph) {
+                        target.innerHTML = firstParagraph.outerHTML;
+                    } else {
+                        target.innerHTML = '<p>No paragraphs found in the response.</p>';
+                    }
+                    
+                    console.log(data);
+                }
+            );
+        });
+
+        document.getElementById('openExternalLink').addEventListener('click', function () {
+            const url = 'http://10.0.2.34';
+            window.location.href = url;
+        });
+
+        bindPageUnloadLoader();
+    </script>
+</body>
+</html>
