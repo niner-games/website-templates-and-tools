@@ -12,8 +12,6 @@
 
         <title><?= $config['long_name'] ?? 'Akademia Śląska -- TEST Server' ?></title>
         
-        <link rel="icon" type="image/png" href="favicon.png" />
-        
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
