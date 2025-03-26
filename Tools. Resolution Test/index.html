@@ -1,0 +1,64 @@
+<!-- https://www.sitepoint.com/a-minimal-html-document-html5-edition/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Resolution Test</title>
+    
+    <!-- TODO: This is prototype's engine only! Remove before actual implementation !!! -->
+    
+    <script src="engine/translation-engine.js"></script>
+    <script src="engine/resolution-box.js"></script>
+    <script src="engine/url-box.js"></script>
+    
+    <script defer="defer">
+        window.addEventListener("load", function() {
+            UrlBox.setUrl('https://xcq.pl/rt');
+        });
+    </script>
+    
+    <!-- TODO: This is an actual translation table's pointer for current prototype -->
+    
+    <script src="translation.js"></script>
+    
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="bg">
+    
+        <div id="main-overlay" class="overlay">
+        
+            <span text="setText('startup', 'First code the default layout (2000 px),')"></span><br />
+            <span text="setText('startup', 'and then use CSS3 media queries')"></span><br />
+            <span text="setText('startup', 'to code several child layouts,')"></span><br />
+            <span text="setText('startup', 'i.e.: 1800 px, 1200 px, 1024 px, 768 px and 480 px.')"></span><br /><br />
+            
+            <strong>
+            
+                <span id="mq-more" style="display: none" text="setText('startup', 'MQ6: 1800+ px (Ultra HD screens, banner displays)')"></span>
+                <span id="mq-1800" style="display: none" text="setText('startup', 'MQ5: 1201 px to 1800 px (Full HD screens, big displays)')"></span>
+                <span id="mq-1200" style="display: none" text="setText('startup', 'MQ4: 1025 px to 1200 px (HD screens, desktops)')"></span>
+                <span id="mq-1024" style="display: none" text="setText('startup', 'MQ3: 769 px to 1024 px (small screens, laptops)')"></span>
+                <span id="mq-768" style="display: none" text="setText('startup', 'MQ2: 481 px to 768 px (tablets)')"></span>
+                <span id="mq-480" style="display: none" text="setText('startup', 'MQ1: 320 px to 480 px (phones)')"></span>
+                
+            </strong>
+        
+        </div>
+        
+        <div id="copyright-overlay" class="overlay">
+        
+            <a href="https://en.wikipedia.org/wiki/File:Fog_on_the_San_Juan_River.jpg"><span text="setText('startup', 'Looking northeast across the San Juan River on Vancouver Island, British Columbia.')"></span></a>
+            
+            @ <a href="https://www.flickr.com/photos/pesterev/">Sergey Pesterev</a>
+            
+            (<a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en"><span text="setText('startup', 'Creative Commons Attribution-Share Alike 2.0 Generic License')"></span></a>)
+            
+        </div>
+    
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Webfont: Lost Pixelized Font Regular */
+@font-face {
+    font-family: 'Lost Pixelized Font';
+    src: url('lpf.woff2') format('woff2'), /* Safari, Android, iOS */
+         url('lpf.woff') format('woff'), /* Modern Browsers */
+         url('lpf.otf') format('opentype'), /* Modern Browsers */
+         url('lpf.ttf') format('truetype'); /* IE6-IE9 */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Lost Pixelized Font', monospace;
+}
+
+#bg {
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("back.jpg");
+    background-position: center center;
+}
+
+.overlay {
+    color: #222;
+    padding: 3px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid 2px rgba(0, 0, 0, 0.3);
+}
+
+#main-overlay {
+    color: #ddd;
+    margin: 11%;
+    padding: 42px;
+    font-size: 42px;
+    text-align: center;
+    text-shadow: 1px 1px #111;
+}
+
+#copyright-overlay {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    margin: 0 7px 7px 0;
+}
+
+#copyright-overlay a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* MQ5: 1201 px to 1800 px (Full HD screens, big displays) */
+
+@media only screen and (min-width: 1801px) {
+    #mq-more {display: block}
+    #mq-1800 {display: none}
+    #mq-1200 {display: none}
+    #mq-1024 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    strong {font-size: 49px}
+    #main-overlay {font-size: 42px}
+}
+
+/* MQ5: 1201 px to 1800 px (Full HD screens, big displays) */
+
+@media only screen and (max-width: 1800px) {
+    #mq-more {display: none}
+    #mq-1800 {display: block}
+    #mq-1200 {display: none}
+    #mq-1024 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    strong {font-size: 42px}
+    #main-overlay {font-size: 35px}
+}
+
+/* MQ4: 1025 px to 1200 px (HD screens, desktops) */
+
+@media only screen and (max-width: 1200px) {
+    #mq-more {display: none}
+    #mq-1800 {display: none}
+    #mq-1200 {display: block}
+    #mq-1024 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    strong {font-size: 42px}
+    #main-overlay {font-size: 35px}
+}
+
+/* MQ3: 769 px to 1024 px (small screens, laptops) */
+
+@media only screen and (max-width: 1024px) {
+    #mq-more {display: none}
+    #mq-1800 {display: none}
+    #mq-1200 {display: none}
+    #mq-1024 {display: block}
+    #mq-768 {display: none}
+    #mq-480 {display: none}
+    
+    strong {font-size: 33px}
+    #main-overlay {font-size: 25px}
+}
+
+/* MQ2: 481 px to 768 px (tablets) */
+
+@media only screen and (max-width: 768px) {
+    #mq-more {display: none}
+    #mq-1800 {display: none}
+    #mq-1200 {display: none}
+    #mq-1024 {display: none}
+    #mq-768 {display: block}
+    #mq-480 {display: none}
+    
+    strong {font-size: 21px}
+    #main-overlay {font-size: 15px}
+}
+
+/* MQ1: 320 px to 480 px (phones) */
+
+@media only screen and (max-width: 480px) {
+    #mq-more {display: none}
+    #mq-1800 {display: none}
+    #mq-1200 {display: none}
+    #mq-1024 {display: none}
+    #mq-768 {display: none}
+    #mq-480 {display: block}
+    
+    strong {font-size: 14px}
+    #main-overlay {font-size: 10px}
+}
