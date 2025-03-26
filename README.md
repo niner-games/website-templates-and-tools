@@ -7,35 +7,23 @@
 </p>
 
 <p align="center">
-    <img src="TITLE.svg" width="600" height="63" alt="Animated Title: Website and Company Hosting Structure">
+    <img src="TITLE.svg" width="600" height="63" alt="Niner Games: Website Themes">
 </p>
 
 <hr>
 
-Hosting structure used for hosting all pages, SEO stubs etc. for our games.
+Data Collector and Contact Form Processors
+------------------------------------------
 
-Redirecting several domains to one shared folder
-------------------------------------------------
+We can use Google Docs / Form to collect data provided by users.
 
-Main domain ([`https://ninergames.com/`](https://ninergames.com/)) is currently served by Wordpress and therefore Wordpress installation is deployed to [`domains/ninergames.com/public_html`](https://github.com/niner-games/tech-server-webpages/tree/main/domains/ninergames.com/public_html) folder.
+https://docs.google.com/forms/d/e/1FAIpQLSflmQnXzwbERpqM9yqZBOKJFY06RweJc333IRxFcg4fT6W20A/formResponse
 
-If we would ever like to user Wordpress Network feature ([1](https://developer.wordpress.org/advanced-administration/multisite/create-network/), [2](https://www.smashingmagazine.com/2020/01/complete-guide-wordpress-multisite/), [3](https://learn.wordpress.org/tutorial/introduction-to-wordpress-multisite-networks/), [4](https://www.hostinger.com/tutorials/activate-wordpress-multisite), [5](https://www.wpbeginner.com/wp-tutorials/how-to-install-and-setup-wordpress-multisite-network/), [6](https://gowp.com/wordpress-multisite-tutorial/)) -- point more domains to the same Wordpress installation (for i.e. marketing purposes) -- then this is not achievable via AfterMarket.pl's DirectAdmin and must be done manually.
+This includes processing both regular contact form and gathering emails of those who want to stay in touch.
 
-Steps:
+Or we can use SMS Planet's tools:
 
-1. Ask AfterMarket.pl's support to enable `open_basedir` setting in PHP for added domain or domains (contact them at: <kontakt@aftermarket.hosting>, must write from gaman's email address!)
+https://panel.smsplanet.pl/s/datacollector
+https://panel.smsplanet.pl/s/shortener
 
-2. Login to `web5.aftermarket.hosting:22` via PuTTy / SSH.
-
-3. Execute the following commands (an example for the `cavo.pl` domain):
-
-```bash
-mv /home/trejder/domains/cavo.pl/public_html /home/trejder/domains/cavo.pl/public_html_old
-ln -s /home/trejder/domains/acrid.pl/public_html /home/trejder/domains/cavo.pl/public_html
-```
-
-(since these commands operate on absolute paths, they can be executed in any folder)
-
-4. Check everything, if it is working.
-
-More information: [in a private email exchange](https://mail.google.com/mail/u/0/#all/FMfcgzGxSbrtwvzJDpcxwGFwgjwGmJNv).
+Or Łukasz's idea: https://mail.google.com/mail/u/0/#inbox/FMfcgzGxSHkDghvsDDSnwQbQNvmxbqKj
