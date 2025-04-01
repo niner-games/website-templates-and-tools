@@ -19,25 +19,26 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: start; /* Aligns .portrait-box to the top of the viewport */
+            padding-top: 5vh; /* Add an explicit top padding */
         }
 
         .portrait-box {
-            width: 90%;
-            max-width: 400px;
-            height: 90%;
-            max-height: 900px;
-            background-color: #C7BFAC;
+            background-color: #C7BFAC !important;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
             display: flex;
             flex-direction: column;
+            height: 90dvh;
+            
+            max-height: 900px;
+            max-width: 400px;
+            overflow: hidden;
+            position: relative;
+            width: 90%;
+            z-index: 1;
         }
 
         #title-section {
@@ -89,15 +90,14 @@
             background: url('images/separator-03.png') no-repeat center center;
             background-size: cover;
         }
-       
+        
         #content-section {
-            flex-grow: 1;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+        
         .content-div {
             width: 93%;
             margin: 0;

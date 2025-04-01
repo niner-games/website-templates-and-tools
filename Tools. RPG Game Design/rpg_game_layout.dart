@@ -14,40 +14,56 @@ class RPGGame extends StatelessWidget {
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/background.jpg'),
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
-            ),
+            color: Color(0xFF222222),
           ),
-          child: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: MediaQuery.of(context).size.height * 0.9,
-              constraints: const BoxConstraints(maxWidth: 400, maxHeight: 900),
-              decoration: BoxDecoration(
-                color: const Color(0xFFC7BFAC),
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    blurRadius: 10,
+          child: Stack(
+            children: [
+              _buildBackground(),
+              Padding(
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
+                child: Center(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.9,
+                    constraints: const BoxConstraints(maxWidth: 400, maxHeight: 900),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFC7BFAC),
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.5),
+                          blurRadius: 10,
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        _buildTitleSection(),
+                        _buildSeparator('assets/images/separator-01.png'),
+                        _buildContentSection(context),
+                        _buildSeparatorWithLabel('123', 'assets/images/separator-02.png'),
+                        _buildButtonsSection(),
+                        _buildSeparator('assets/images/separator-03.png'),
+                        _buildMenuSection(),
+                      ],
+                    ),
                   ),
-                ],
+                ),
               ),
-              child: Column(
-                children: [
-                  _buildTitleSection(),
-                  _buildSeparator('assets/separator-01.png'),
-                  _buildContentSection(context),
-                  _buildSeparatorWithLabel('123', 'assets/separator-02.png'),
-                  _buildButtonsSection(),
-                  _buildSeparator('assets/separator-03.png'),
-                  _buildMenuSection(),
-                ],
-              ),
-            ),
+            ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBackground() {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/background.jpg'),
+          fit: BoxFit.cover,
+          alignment: Alignment.topCenter,
         ),
       ),
     );
@@ -55,16 +71,26 @@ class RPGGame extends StatelessWidget {
 
   Widget _buildTitleSection() {
     return Container(
-      height: 7.16, // Height is relative to the parent container
-      margin: const EdgeInsets.only(top: 10),
+      height: MediaQuery.of(context).size.height * 0.0716,
+      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.03),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.asset('assets/logo.jpg', fit: BoxFit.contain),
+            child: Image.asset(
+              'assets/images/logo.jpg',
+              fit: BoxFit.contain,
+              width: MediaQuery.of(context).size.width * 0.18,
+              height: MediaQuery.of(context).size.height * 0.0716,
+            ),
           ),
-          Image.asset('assets/title.png', fit: BoxFit.contain),
+          Image.asset(
+            'assets/images/title.png',
+            fit: BoxFit.contain,
+            width: MediaQuery.of(context).size.width * 0.78,
+            height: MediaQuery.of(context).size.height * 0.0716,
+          ),
         ],
       ),
     );
@@ -72,7 +98,7 @@ class RPGGame extends StatelessWidget {
 
   Widget _buildSeparator(String imagePath) {
     return Container(
-      height: 65,
+      height: MediaQuery.of(context).size.height * 0.0281,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(imagePath),
@@ -106,13 +132,15 @@ class RPGGame extends StatelessWidget {
         child: Column(
           children: [
             _buildContentDiv(
-                'You look around and see a small crowd of people in medieval outfits. Women wear long dresses and tall pointy hats with long flowing veils.'),
+              'You look around and see a small crowd of people in medieval outfits. Women wear long dresses and tall, pointy hats with long, flowing veils.',
+            ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 20),
-              child: Image.asset('assets/123.jpg', fit: BoxFit.contain),
+              child: Image.asset('assets/paragraphs/123.jpg', fit: BoxFit.contain),
             ),
             _buildContentDiv(
-                'Men walk by in heavy armour, carrying shiny swords. Jugglers show off their tricks, and sellers call out to show their food trays. You can see a small castle-like building in the back.'),
+              'Men walk by in heavy armor, carrying shiny swords. Jugglers show off their tricks, and sellers call out to display their food trays. In the back, you can see a small castle-like building — more like an English manor than a medieval stronghold.',
+            ),
           ],
         ),
       ),
@@ -121,8 +149,9 @@ class RPGGame extends StatelessWidget {
 
   Widget _buildContentDiv(String text) {
     return Container(
-      width: 0.93,
-      padding: const EdgeInsets.all(10),
+      width: MediaQuery.of(context).size.width * 0.93,
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.all(0),
       child: Text(
         text,
         style: const TextStyle(color: Colors.black, fontSize: 16),
@@ -133,7 +162,7 @@ class RPGGame extends StatelessWidget {
 
   Widget _buildButtonsSection() {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Column(
         children: [
           _buildGameButton('Ask a question to a juggler', () {}),
@@ -145,11 +174,14 @@ class RPGGame extends StatelessWidget {
 
   Widget _buildGameButton(String label, VoidCallback onPressed) {
     return SizedBox(
-      width: 0.93,
+      width: MediaQuery.of(context).size.width * 0.93,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFF968B6B),
           padding: const EdgeInsets.symmetric(vertical: 10),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(7),
+          ),
         ),
         onPressed: onPressed,
         child: Text(
@@ -165,22 +197,22 @@ class RPGGame extends StatelessWidget {
   }
 
   Widget _buildMenuSection() {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.all(10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              _buildMenuButton('assets/menu-fight.png', () {}),
-              _buildMenuButton('assets/menu-craft.png', () {}),
-              _buildMenuButton('assets/menu-map.png', () {}),
+              _buildMenuButton('assets/images/menu-fight.png', () {}),
+              _buildMenuButton('assets/images/menu-craft.png', () {}),
+              _buildMenuButton('assets/images/menu-map.png', () {}),
             ],
           ),
           Row(
             children: [
-              _buildMenuButton('assets/menu-time.png', () {}),
-              _buildMenuButton('assets/menu-settings.png', () {}),
+              _buildMenuButton('assets/images/menu-time.png', () {}),
+              _buildMenuButton('assets/images/menu-settings.png', () {}),
             ],
           ),
         ],
