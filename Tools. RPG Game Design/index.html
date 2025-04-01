@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple RPG Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .portrait-box {
+            width: 90%;
+            max-width: 400px;
+            height: 90%;
+            max-height: 900px;
+            background-color: #C7BFAC;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #title-section {
+            height: 7.16%;
+            padding-top: 3%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-image {
+            width: 18%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .title-image {
+            width: 78%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #separator-1 {
+            height: 2.81%;
+            background: url('images/separator-01.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        #separator-2 {
+            height: 2.81%;
+            background: url('images/separator-02.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .separator-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #640706;
+        }
+        
+        #separator-3 {
+            height: 2.81%;
+            background: url('images/separator-03.png') no-repeat center center;
+            background-size: cover;
+        }
+       
+        #content-section {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-div {
+            width: 93%;
+            margin: 0;
+            background-color: transparent;
+            color: black;
+            text-align: left;
+            height: auto;
+        }
+        
+        .content-div p, 
+        .content-div * {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+        }
+        
+        #content-div-1 {
+            margin: 10px 0 20px 0;
+        }
+        
+        #content-div-2 {
+            margin: 20px 0 10px 0;
+        }
+        
+        .content-image {
+            width: 88%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            object-fit: contain;
+            border: solid 1px brown;
+        }
+
+        #buttons-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            background-color: transparent;
+        }
+
+        .game-button {
+            background-color: #968B6B;
+            color: #640706;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 7px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            width: 93%;
+            transition: background-color 0.7s ease;
+        }
+
+        .game-button:hover {
+            background-color: #84765C;
+        }
+        
+        #menu-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px 5px 10px;
+        }
+
+        .menu-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .menu-left,
+        .menu-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 2px white);
+        }
+
+        .menu-button:hover img {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="portrait-box">
+            <div class="section" id="title-section">
+                <div style="width: 18%; height: 100%; border-radius: 8px; overflow: hidden;">
+                    <img src="images/logo.jpg" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <img src="images/title.png" class="title-image" alt="Title">
+            </div>
+            
+            <div class="section" id="separator-1"></div>
+            
+            <div class="section" id="content-section">
+                <div class="content-div" id="content-div-1">
+                    <p>You look around and see a small crowd of people in medieval outfits. Women wears long dresses and tall pointy hats with long flowing down veils.</p>
+                </div>
+                <img src="paragraphs/123.jpg" alt="Separator" class="content-image">
+                <div class="content-div" id="content-div-2">
+                    <p>Men walk by in heavy armour, carrying shiny swords. Jugglers show off their tricks, and sellers call out to show their food trays. You can see a small castle-like building in the back. More like an English manor rather than a medieval stronghold.</p>
+                </div>
+            </div>
+
+            <div class="section" id="separator-2">
+                <div class="separator-label">123</div>
+            </div>
+            
+            <div class="section" id="buttons-section">
+                <button class="game-button" onclick="makeChoice(3)">Ask a question to a juggler</button>
+                <button class="game-button" onclick="makeChoice(4)">Speak to a passing knight</button>
+            </div>
+            
+            <div class="section" id="separator-3"></div>
+            
+            <div class="section" id="menu-section">
+                <div class="menu-buttons">
+                    <div class="menu-left">
+                        <button class="menu-button"><img src="images/menu-fight.png" alt="Fight"></button>
+                        <button class="menu-button"><img src="images/menu-craft.png" alt="Craft"></button>
+                        <button class="menu-button"><img src="images/menu-map.png" alt="Map"></button>
+                    </div>
+                    <div class="menu-right">
+                        <button class="menu-button"><img src="images/menu-time.png" alt="Time"></button>
+                        <button class="menu-button"><img src="images/menu-settings.png" alt="Settings"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
