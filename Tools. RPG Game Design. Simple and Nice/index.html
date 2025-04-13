@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Visual Novel Design</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* General styles to hide/show containers */
+        .landscape-container, .portrait-container {
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Landscape-specific styles */
+        @media (orientation: landscape) {
+            .landscape-container {
+                display: block;
+            }
+
+            .landscape-background {
+                background-image: url('your-background-image.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .landscape-text-field {
+                position: absolute;
+                bottom: 0;
+                width: 77%;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                padding: 20px;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                font-size: 21px;
+            }
+        }
+
+        /* Portrait-specific styles */
+        @media (orientation: portrait) {
+            .portrait-container {
+                display: block;
+            }
+
+            .portrait-background {
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), url('your-background-image.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                opacity: 0.7;
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .portrait-text-field {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 85%;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                padding: 5px 20px;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+                font-size: 21px;
+                border-radius: 8px;
+            }
+
+            .portrait-inner-background {
+                display: block;
+                margin: 20px 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Landscape View -->
+    <div class="landscape-container">
+        <div class="landscape-background">
+            <div class="landscape-text-field">
+                <p>Haruto and Akiko sat by the campfire under a sky full of stars. The fire kept them warm in the cold night. Akiko looked at the flames, lost in her thoughts, while Haruto drew shapes in the dirt. They had come here to take a break from their worries and find peace in nature.</p>
+                <p>Akiko opened a map and showed Haruto a place in the mountains. She said it was a place where wishes could come true. Haruto nodded, though he knew they were here not for magic but to enjoy the quiet moment together. The fire and the stars made them feel calm, and for now, that was enough.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portrait View -->
+    <div class="portrait-container">
+        <div class="portrait-background"></div>
+        <div class="portrait-text-field">
+            <p>Haruto and Akiko sat by the campfire under a sky full of stars. The fire kept them warm in the cold night. Akiko looked at the flames, lost in her thoughts, while Haruto drew shapes in the dirt. They had come here to take a break from their worries and find peace in nature.</p>
+            <img src="your-background-image.jpg" alt="Scene in the mountains" class="portrait-inner-background">
+            <p>Akiko opened a map and showed Haruto a place in the mountains. She said it was a place where wishes could come true. Haruto nodded, though he knew they were here not for magic but to enjoy the quiet moment together. The fire and the stars made them feel calm, and for now, that was enough.</p>
+        </div>
+    </div>
+</body>
+</html>
